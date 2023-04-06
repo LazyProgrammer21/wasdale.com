@@ -312,7 +312,7 @@ ul, ol {
 	font-size: 13px;
 	font-weight: 700;
 	padding: 16px 28px 15px;
-	background: #dfa974;
+	background: #a05b16;
 	color: #ffffff;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -324,11 +324,7 @@ ul, ol {
 	padding: 13px 0px 11px;
 	position: relative;
 }
-.top-nav .tn-right .language-option:hover .flag-dropdown {
-	top: 40px;
-	opacity: 1;
-	visibility: visible;
-}
+
 .top-nav .tn-right .language-option img {
 	height: 26px;
 	width: 26px;
@@ -1836,6 +1832,9 @@ width: 100%; /* set the desired width of the div */
 		color: #ffffff;
 		text-transform: uppercase;
 		letter-spacing: 2px;
+	}
+	.bk-btn:hover{
+		background-color: #673ab7;
 	}
 	.offcanvas-menu-wrapper .mainmenu {
 		display: none;
