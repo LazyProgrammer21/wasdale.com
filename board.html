@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Board Members</title>
+  <style>
+    /* CSS styles for board member data */
+    .member {
+      margin-bottom: 20px;
+    }
+    .name {
+      font-weight: bold;
+    }
+    .age,
+    .height,
+    .sex {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="boardMembers">
+    <!-- Board member data will be dynamically generated here -->
+  </div>
+  
+  <script>
+    // JavaScript code to display board member data
+    const customers = [
+      {"name": "John", "age": 30, "height": 5.8, "sex": "Male"},
+      {"name": "Alice", "age": 25, "height": 5.5, "sex": "Female"},
+      {"name": "Michael", "age": 40, "height": 6.1, "sex": "Male"},
+      {"name": "Sophia", "age": 22, "height": 5.6, "sex": "Female"},
+      {"name": "David", "age": 35, "height": 5.9, "sex": "Male"}
+    ];
+
+    const boardMembersContainer = document.getElementById("boardMembers");
+
+    // Loop through the customer data and generate HTML dynamically
+    for (let i = 0; i < customers.length; i++) {
+      const customer = customers[i];
+      const memberDiv = document.createElement("div");
+      memberDiv.className = "member";
+      memberDiv.innerHTML = `
+        <div class="name">${customer.name}</div>
+        <div class="age">Age: ${customer.age}</div>
+        <div class="height">Height: ${customer.height}</div>
+        <div class="sex">Sex: ${customer.sex}</div>
+      `;
+      boardMembersContainer.appendChild(memberDiv);
+    }
+  </script>
+</body>
+</html>

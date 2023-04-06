@@ -28,6 +28,9 @@
       $(function(){
         $("#footer-placeholder").load("footer.html");
       });
+      $(function(){
+        $("#imageSlider-placeholder").load("imageSlider.html");
+      });
 
 
 
@@ -98,6 +101,25 @@
         navText: ["<i class='arrow_left'></i>", "<i class='arrow_right'></i>"]
     });
 
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+          center: true,
+          loop: true,
+          margin: 10,
+          responsive:{
+            0:{
+              items:1
+            },
+            600:{
+              items:3
+            },
+            1000:{
+              items:5
+            }
+          }
+        });
+      });
+      
     /*------------------
         Magnific Popup
     --------------------*/
