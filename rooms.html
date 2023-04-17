@@ -69,20 +69,17 @@
                       </div>
                 <script>
                     const roomdetails = [
-                    {"name":"Triple Room","Price":"£0","capacity":3,"description":"Sleeps 3 people. First ...", "facilities":"Tea/Coffee Making ... ","image":"room-1.jpg","link":"room1detail.html"},
-                    {"name":"Single Room","Price":"£0","capacity":1,"description":"Sleeps 1 people. First ...", "facilities":"Tea/Coffee Making ...","image":"room-2.jpg","link":"room2detail.html"},
-                    {"name":"Accessible Apartment","Price":"£0","capacity":2,"description":"Wheelchair Accessible...", "facilities":"Tea/Coffee Making ...","image":"room-3.jpg","link":"room3detail.html"},
+                    {"name":"Triple Room","Price":"£0","capacity":3,"description":"Sleeps 3 people.First.....", "facilities":"Tea / Coffee Making...","image":"room-1.jpg","link":"room1detail.html"},
+                    {"name":"Single Room","Price":"£0","capacity":1,"description":"Sleeps 1 people.First...", "facilities":"Tea/Coffee Making...","image":"room-2.jpg","link":"room2detail.html"},
+                    {"name":"Accessible Apartment","Price":"£0","capacity":2,"description":"Wheelchair Accessible...", "facilities":"Tea/Coffee Making...","image":"room-3.jpg","link":"room3detail.html"},
                     {"name":"Yewbarrow Suite","Price":"£0","capacity":2,"description":"Superior Double Room with...", "facilities":"Tea/Coffee...","image":"room-4.jpg","link":"room4detail.html"},
-                    {"name":"Pillar Suite","Price":"£0","capacity": 3,"description":"King Size Bed Plus  ...", "facilities":"Tea/Coffee Trey ...","image":"room-5.jpg","link":"room5detail.html"},
-                
-                    
-                    
-                    {"name":"King Room","Price":"£0","capacity":2,"description":"King Size Bed...", "facilities":"Tea/Coffee Making ...","image":"room-8.jpg","link":"room8detail.html"},
-                    {"name":"Double Room","Price":"£0","capacity":2,"description":"Double beds...", "facilities":"Tea/Coffee Making ...","image":"room-10.jpg","link":"room10detail.html"},
-                    {"name":"Studio Suite","Price":"£0","capacity":2,"description":"Superior room..", "facilities":"Tea/Coffee Making ...","image":"room-11.jpg","link":"room11detail.html"},
-                    {"name":"Twin Room","Price":"£0","capacity":2,"description":"2 Single beds...", "facilities":"Tea/Coffee Making, LCD TV ...","image":"room-6.jpg","link":"room6detail.html"},
-                    {"name":"Garden Room","Price":"£0","capacity":2,"description":"Superior double beds...", "facilities":"Tea/Coffee Making ...","image":"room-9.jpg","link":"room9detail.html"},
-                    {"name":"Rowfoot Suite","Price":"£0","capacity":2,"description":"Large Sitting area..", "facilities":"large bed, telephone ...","image":"room-7.jpg","link":"room7detail.html"},
+                    {"name":"Pillar Suite","Price":"£0","capacity": 3,"description":"King Size Bed Plus...", "facilities":"Tea/Coffee Trey...","image":"room-5.jpg","link":"room5detail.html"},
+                    {"name":"King Room","Price":"£0","capacity":2,"description":"King Size Bed...", "facilities":"Tea/Coffee Making...","image":"room-8.jpg","link":"room8detail.html"},
+                    {"name":"Double Room","Price":"£0","capacity":2,"description":"Double beds...", "facilities":"Tea/Coffee Making...","image":"room-10.jpg","link":"room10detail.html"},
+                    {"name":"Studio Suite","Price":"£0","capacity":2,"description":"Superior room..", "facilities":"Tea/Coffee Making...","image":"room-11.jpg","link":"room11detail.html"},
+                    {"name":"Twin Room","Price":"£0","capacity":2,"description":"2 Single beds...", "facilities":"Tea/Coffee Making, LCD TV...","image":"room-6.jpg","link":"room6detail.html"},
+                    {"name":"Garden Room","Price":"£0","capacity":2,"description":"Superior double beds...", "facilities":"Tea/Coffee Making...","image":"room-9.jpg","link":"room9detail.html"},
+                    {"name":"Rowfoot Suite","Price":"£0","capacity":2,"description":"Large Sitting area..", "facilities":"large bed, telephone...","image":"room-7.jpg","link":"room7detail.html"},
                    
                     ]
                     const roomcontainer  =document.getElementById("roomsx1")
@@ -95,6 +92,7 @@
                         memdiv.innerHTML=`
                         
                         <div class=" child1 room-item">
+                            <a href="https://wasdale.dbm.guestline.net/availability?hotel=WASDALE464">
                         <img src="img/room/${room.image}" alt="">
                         <div class="ri-text">
                             <h4>${room.name}</h4>
@@ -112,11 +110,15 @@
                                     <tr>
                                         <td class="r-o">Services:</td>
                                         <td>${room.facilities}</td>
+                                        
+                                        
                                     </tr>
+
                                 </tbody>
                             </table>
-                            // <a href="./${room.link}" class="primary-btn">More Details</a>
+                          </a>
                         </div>
+
                     </div>
                                      
                         `;

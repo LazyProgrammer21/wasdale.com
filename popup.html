@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="description" content="Wasdale Head Inn">
+  <meta name="keywords" content="Hotel, 3 star, Wasdale">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rooms-Wasdale Head Inn</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+
+  <!-- Css Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+  <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+  <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <!-- <script src="./js/main.js"></script> -->
+  <style>
+    /* Styling for the popup overlay */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      display: none;
+    }
+
+    /* Styling for the popup window */
+    .popup {
+      width: 80vh;
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      padding: 20px;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Styling for the close button */
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      border-color:blue ;
+    }
+  </style>
+</head>
+<body>
+  <h1>Popup Example</h1>
+  <button onclick="showPopup()">Click me</button>
+
+
+                <div class="row" style="width: 200vh;">
+                    <div id="roomsx1" style="width: 100%; display: flex; flex-wrap: wrap;">
+                          </div>
+                                   
+                </div>
+  
+  <script>
+      const roomdetails = [
+                        {"name":"Triple Room","Price":"£0","capacity":3,"description":"Sleeps 3 people. First floor in main building. 3 Single beds, bathroom has bath and shower.", "facilities":"Tea / Coffee Making Facilities, TV / Radio, TV with Satellite channels, Hair Dryer, Cooking Facilities ","image":"room-1.jpg","link":"room1detail.html"},
+                        // {"name":"Single Room","Price":"£0","capacity":1,"description":"Sleeps 1 people. First ...", "facilities":"Tea/Coffee Making ...","image":"room-2.jpg","link":"room2detail.html"},
+                        ]
+                        const roomcontainer  =document.getElementById("roomsx1")
+                        for( let i=0;i<roomdetails.length;i++){
+    
+                            const room = roomdetails[i];
+    
+                            const memdiv = document.createElement("div")
+                            memdiv.className="col-lg-4 col-md-6";
+                            memdiv.innerHTML=`
+                            
+                            <div class=" child1 room-item">
+                            <img src="img/room/${room.image}" alt="">
+                            <div class="ri-text">
+                                <h4 style="text-align:center">${room.name}</h4>
+                                <h3>${room.Price}<span>/Pernight</span></h3>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>Max ${room.capacity}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Description:</td>
+                                            <td>${room.description}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>${room.facilities}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                         
+                            </div>
+                        </div>
+                                         
+                            `;
+                            roomcontainer.appendChild(memdiv);
+    
+                        }
+    // JavaScript function to show the popup window
+    function showPopup() {
+      // Show the popup overlay and window
+      document.getElementById('popupOverlay').style.display = 'block';
+      document.getElementById('popupWindow').style.display = 'block';
+    }
+
+    // JavaScript function to close the popup window
+    function closePopup() {
+      // Hide the popup overlay and window
+      document.getElementById('popupOverlay').style.display = 'none';
+      document.getElementById('popupWindow').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
