@@ -2,6 +2,7 @@
 
 'use strict';
 
+window.alert("All the data used here is only for educational and business proposal. There are no any intension of harm/ breach of the data collected from the Hotel");
 (function ($) {
 
     /*------------------
